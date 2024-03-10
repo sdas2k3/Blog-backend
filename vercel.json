@@ -8,13 +8,13 @@
     ],
     "routes": [
         {
-            "src": "/api/(.*)",
+            "src": "/api1/(.*)",
             "dest": "index.js"
         }
     ],
     "headers": [
         {
-            "source": "/api/(.*)",
+            "source": "/api1/(.*)",
             "headers": [
                 {
                     "key": "Access-Control-Allow-Credentials",

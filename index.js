@@ -30,9 +30,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Routes
-app.use("/api/auth", authRouter);
-app.use("/api/user", userRouter);
-app.use("/api/post", postRouter);
+app.use("/api1/auth", authRouter);
+app.use("/api1/user", userRouter);
+app.use("/api1/post", postRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World!!!");
