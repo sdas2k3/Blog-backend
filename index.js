@@ -33,7 +33,6 @@ app.use(
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use("/uploads", express.static(path.resolve(__dirname + "/uploads")));
 
 // Routes
 app.use("/api/auth", authRouter);
