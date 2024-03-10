@@ -23,7 +23,13 @@ mongoose
   });
 
 // MiddleWare
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://blog-frontend-sdas2k3.vercel.app/",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  })
+);
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -39,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-  res.send("Testing123....");
+  res.send("Testing....");
 });
 
 app.listen(process.env.PORT || 8000, () => {
