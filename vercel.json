@@ -1,0 +1,23 @@
+{
+    "env": {
+        "MONGO_URI": "mongodb+srv://Shirsendu:UHkIWZCcmsnUo1bK@cluster0.mqqsnkf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "JWT_SECRET": "Jaishreeram@2k3",
+        "PORT": "4000",
+        "CLOUD_NAME": "dvujclljo",
+        "API_KEY": "619433129439663",
+        "API_SECRET": "nukn7pOmsx5v2SJfKGRsjaXMGlA"
+    },
+    "build": {
+        "env": {
+            "NODE_ENV": "production"
+        },
+        "functions": {
+            "preBuild": {
+                "command": "npm install"
+            },
+            "build": {
+                "command": "npm run build"
+            }
+        }
+    }
+}
