@@ -13,18 +13,18 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/api/*",
             "dest": "index.js",
             "methods": [
                 "GET",
-                "OPTIONS",
-                "PATCH",
-                "DELETE",
                 "POST",
-                "PUT"
+                "PUT",
+                "DELETE"
             ],
             "headers": {
                 "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH",
+                "Access-Control-Allow-Headers": "Content-Type",
                 "Access-Control-Allow-Credentials": "true"
             }
         }
