@@ -25,7 +25,7 @@ mongoose
 // MiddleWare
 app.use(
   cors({
-    origin: "https://blog-frontend-sdas2k3.vercel.app/",
+    origin: "*",
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })

@@ -24,7 +24,7 @@
                 "PUT"
             ],
             "headers": {
-                "Access-Control-Allow-Origin": "https://blog-frontend-sdas2k3.vercel.app/"
+                "Access-Control-Allow-Origin": "*"
             }
         }
     ]
