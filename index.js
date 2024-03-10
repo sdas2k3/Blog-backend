@@ -18,10 +18,9 @@ mongoose
   });
 
 // MiddleWare
-app.set("trust proxy", 1);
 app.use(
   cors({
-    origin: "*",
+    origin: "https://blog-frontend-sdas2k3.vercel.app/",
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
