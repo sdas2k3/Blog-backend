@@ -45,8 +45,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-  res.json("working");
+  res.send("Testing....");
 });
+
 app.listen(process.env.PORT || 8000, () => {
   console.log("Server is running");
 });

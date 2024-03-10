@@ -35,6 +35,7 @@ const extractPublicId = (url) => {
 
 postRouter.post("/create-post", upload.single("file"), (req, res) => {
   const fileUrl = req.file.path;
+  console.log(fileUrl)
   const newPath = fileUrl;
   const { token } = req.cookies;
   jwt.verify(token, process.env.JWT_SECRET, {}, async (err, info) => {
