@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import User from "../models/User.js"; 
+import User from "../models/User.js";
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
 
@@ -40,7 +40,7 @@ authRouter.post("/login", async (req, res) => {
       {},
       (err, token) => {
         if (err) throw err;
-        res.cookie("token", token).json({
+        res.cookie("token", token, { sameSite: "none", secure: "true" }).json({
           id: user._id,
           username,
         });
