@@ -6,12 +6,6 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/api1/(.*)",
-            "dest": "index.js"
-        }
-    ],
     "headers": [
         {
             "source": "/api1/(.*)",
