@@ -18,13 +18,13 @@ mongoose
   });
 
 // MiddleWare
-app.use( 
-  cors({  
-    origin: "*",
+app.use(
+  cors({
+    origin: "https://blog-frontend-sdas2k3.vercel.app",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], 
-  })  
+  })
 );
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
