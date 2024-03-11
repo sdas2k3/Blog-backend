@@ -7,6 +7,9 @@ const userRouter = express.Router();
 
 userRouter.get("/profile", (req, res) => {
   const { token } = req.cookies;
+  if (!token) {
+    res.json(null);
+  }
   jwt.verify(token, process.env.JWT_SECRET, {}, (err, info) => {
     if (err) {
       res.json(null);
@@ -17,4 +20,3 @@ userRouter.get("/profile", (req, res) => {
 });
 
 export default userRouter;
- 
