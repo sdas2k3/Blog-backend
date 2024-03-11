@@ -20,9 +20,9 @@ mongoose
 // MiddleWare
 app.use( 
   cors({  
-    origin: "https://blog-frontend-sdas2k3.vercel.app/",
+    origin: "*",
     credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], 
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], 
   })  
 );
 app.use(express.json());
